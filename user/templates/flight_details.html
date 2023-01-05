@@ -1,0 +1,194 @@
+{% extends 'common_master.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    main {
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .fly_img img {
+        width: 100%;
+    }
+
+    .origin {
+        width: 700px;
+        height: 100px;
+    }
+
+    h2 {
+        background-color: orange;
+    }
+    .details{
+        width: 520px;
+        height: 300px;
+    }
+    /* .btns{
+        height: 50px;
+        width: 250px;
+        background: none;
+        border: 2px solid orange;
+        border-radius: 10px;
+        color: orange;
+        font-weight: 500;
+        font-size: 18px;
+        margin-left: 580px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+    } */
+    .button-container {
+  width: 100%;
+}
+.button-main {
+  display: block;
+  max-width: 250px;
+  margin: auto;
+  perspective: 800px;
+  backface-visibility: hidden;
+}
+
+.button {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  text-transform: uppercase;
+  transform: rotateX(0);
+  transform-style: preserve-3d;
+  transition: all .4s cubic-bezier(.3,.95,.3,.95);
+  margin-bottom: 20px;
+}
+
+.button * {
+  backface-visibility: hidden;
+}
+
+.button-main:hover .button{
+  transform: translateY(-50%) rotateX(90deg)
+}
+
+.button .button-front, 
+.button .button-back {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: all .4s cubic-bezier(.3,.95,.3,.95);
+}
+
+.button .button-front {
+  background: orange;
+}
+
+.button .button-back {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-1px)
+  rotateX(-90deg);
+  transform-origin: 50% 0;
+  background: orange;
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Flight Details</title>
+</head>
+
+<body>
+    <div class="fly_img">
+        <img src="{% static 'images/fly1.png' %}" alt="">
+    </div>
+
+    <main>
+        <h2>Origin</h2>
+        <table class="origin">
+            <tr>
+                <td>City </td>
+                <td>:<span id="origin-city"></span></td>
+            </tr>
+            <tr>
+                <td>Airport </td>
+                <td>:<span id="origin-airport">asdd</span></td>
+            </tr>
+        </table>
+        <h2>Destination</h2>
+        <table class="origin">
+            <tr>
+                <td>City </td>
+                <td>:<span id="destination-city"></span></td>
+            </tr>
+            <tr>
+                <td>Airport </td>
+                <td>:<span id="destination-airport">assd</span></td>
+            </tr>
+        </table>
+        <h2>Flight Details</h2>
+        <table class="details">
+            <tr>
+                <td>Airline </td>
+                <td>:<span id="airline"></span></td>
+            </tr>
+            <tr>
+                <td>Flight Number</td>
+                <td>:<span id="flight-number"></span></td>
+            </tr>
+            <tr>
+                <td>Departure Time </td>
+                <td>:<span id="departure-time">assd</span></td>
+            </tr>
+            <tr>
+                <td>Arrival Time</td>
+                <td>:<span id="arrival-time">assd</span></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td>:<span id="duration"></span></td>
+            </tr>
+        </table>
+    </main>
+    <div class="button-container">
+        <a class="button-main">
+            <span class="button">
+            <span class="button-front">
+        confirm booking
+      </span>
+            <span class="button-back">
+      Book Now
+      </span>
+            </span>
+        </a>
+    
+    </div>
+</body>
+
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'common_master.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>TG. Flights</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+<div class="lists">
+    <div class="list_img">
+        <img src="{% static 'images/logo1.png' %}" alt="">
+    </div>
+        
+<div class="list1">
+    <table class="table">
+        <thead>
+          <tr class="table-secondary">
+            <th scope="col">Flight Name</th>
+            <th scope="col">departure</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Arrival</th>
+            <th scope="col">Price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          
+            
+            <tr class="table-success">
+            <th>dasf</th>
+            <td>sfa</td>
+            <td>fas</td>
+            <td>afs</td>
+            <td>fas</td>
+            <td align="center">
+              <form action="/reservation/" method="get">
+                <a href="{% url 'ease_ad:flight_details' %}">
+              <button style="border: none; background: none" type="submit" value="View more">
+                <i class="bi bi-bookmark-plus"></i>View more</a>
+              </form>
+              </td>
+                
+            </tr>
+          
+        </tbody>
+      </table>
+</div>
+</div>
+</body>
+</html>
+
+
+{% endblock %}

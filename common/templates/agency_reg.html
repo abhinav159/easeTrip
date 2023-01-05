@@ -1,0 +1,130 @@
+{% extends 'common_master.html' %}
+
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Travel Agency Registration</title>
+  <style>
+.registration-container {
+  width: 45%;
+  margin: 0 auto;
+  float: left;
+}
+
+.registration-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-container label {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.registration-container input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+  width: 100%;
+  height: 35px;
+  font-size: 18px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.bank_details input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.bank_details input[type="submit"]:hover {
+  background-image: linear-gradient(#2d557d,#9610fb);
+}
+.agen_reg{
+    width: 80%;
+    height: 800px;
+    margin-left: 10%;
+}
+.bank_details{
+    width: 45%;
+    float: right;
+}
+.bank_details form {
+  display: flex;
+  flex-direction: column;
+}
+
+.bank_details label {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.bank_details input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+  width: 100%;
+  height: 35px;
+  font-size: 18px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.bank_details p{
+    margin-top: 10px;
+
+}
+.agen_reg h5{
+    margin-top: 40px;
+}
+
+  </style>
+</head>
+<body>
+<div class="agen_reg">
+  <div class="registration-container">
+    <h5>Agency details</h5><hr>
+    <form action="/register" method="post">
+      <label for="agency-name">Agency Name:</label><br>
+      <input type="text" id="agency-name" name="agency-name"><br>
+      <label for="contact-name">Contact Name:</label><br>
+      <input type="text" id="contact-name" name="contact-name"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="phone">Phone:</label><br>
+      <input type="tel" id="phone" name="phone"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br>
+      <label for="confirm-password">Confirm Password:</label><br>
+      <input type="password" id="confirm-password" name="confirm-password"><br><br>
+    </form> 
+  </div>
+  <div class="bank_details">
+    <h5>Bank Details</h5><hr>
+    <form>
+    <label for="agency-name">Account Holder Name:</label><br>
+      <input type="text" id="agency-name" name="holder-name"><br>
+      <label for="contact-name">Account Number:</label><br>
+      <input type="text" id="contact-name" name="account-name"><br>
+      <label for="text">IFSC Code:</label><br>
+      <input type="text" id="email" name="ifsc"><br>
+      <label for="text">Branch:</label><br>
+      <input type="text" id="text" name="branch"><br>
+      <input type="submit" value="Submit">
+
+    </form>
+    <p>By proceeding this form you are accepting the <a href=""> Terms & conditions</a></p>
+    <p>Pleasure to work with your agency, Enjoy your journey with us.</p>
+  </div>
+
+</div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'common_master.html' %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel App Login</title>
+  <style>
+.login-container {
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.login-container input[type="text"], input[type="password"] {
+  width: 100%;
+  height: 35px;
+  font-size: 18px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+}
+
+.login-container input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(#2d557d,#9610fb);
+  color: white;
+  cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+  background-color: #45a049;
+}
+.login-container div{
+    background-image: linear-gradient(#2d557d,#9610fb);
+ 
+}
+.login-container p {
+    margin-top: 10px;
+    text-align: center;
+}
+  </style>
+</head>
+<body>
+  <div class="login-container">
+
+    <div><hr><h5>Login with your email<hr></h5></div>
+    <form action="/login" method="post">
+      <label for="username">Email Address:</label><br>
+      <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Continue">
+      <p>forgot your password  ?<a href=""> Click Here</a></p>
+      <p>Don't have an account...&nbsp&nbsp&nbsp  <a href="{% url 'common:agency_reg' %}">  SignUp</a></p>
+    </form> 
+  </div>
+</body>
+</html>
+
+
+{% endblock %}

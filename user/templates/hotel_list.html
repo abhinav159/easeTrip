@@ -1,0 +1,188 @@
+{% extends 'common_master.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<style>
+    .tope {
+        background-color: darkblue;
+        height: 100px;
+
+    }
+
+    .cont {
+        width: 70%;
+        border-radius: 15px;
+        background-image: url(../static/images/pattern.jpg);
+        margin-bottom: 30px;
+        margin-top: -50px;
+    }
+
+    .card1 {
+        padding-top: 30px;
+        padding-left: 10px;
+        padding-bottom: 30px;
+
+
+    }
+
+    .card {
+        border-radius: 10px;
+        box-shadow: 0 0 10px 1px rgb(145, 137, 122);
+        height: 400px;
+
+
+
+    }
+    .card-body{
+        text-align: center;
+    }
+    .card-body a{
+        margin-top: 10px;
+    }
+
+    .card img {
+        height: 150px;
+        width: 13rem;
+        margin-top: 7px;
+        margin-left: 7px;
+    }
+    .exclude{
+    width: 1200px;
+    height: 550px;
+    background-color: red;
+    margin-right: 150px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.mem-p1{
+    padding-top: 50px;
+    margin-left: 70px;
+    color: white;
+}
+.mem-p2{
+    font-size: 40px;
+    margin-left: 70px;
+    color: white;
+}
+.mem-p3{
+    font-size: 20px;
+    color: white;
+    margin-left: 70px;
+}
+.exclude-img img{
+    width: 500px;
+    height: 430px;
+    float: right;
+    margin-top: -232px;
+    margin-right: 10px;
+}
+    .exclude1{
+    width: 1200px;
+    height: 450px;
+    background-color: orange;
+    margin-left: 180px;
+    margin-top: 100px;
+}
+.mem-p4{
+    color: white;
+    float: right;   
+    margin-right: 370px;
+    margin-top: 50px;
+}
+.mem-p5{
+    font-size: 40px;
+    color: white;
+    float: right;   
+    margin-right: 135px;
+
+}
+.mem-p6{
+    font-size: 20px;
+    color: white;
+    margin-left: 70px;
+    float: right;
+    margin-right: 120px;
+}
+.exclude-img1 img{
+    width: 500px;
+    height: 430px;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+</style>
+
+<section>
+    <div class="tope"></div>
+    <div class="container cont">
+        <div class="row">
+            <div class="col-3">
+                    <div class="card1">
+                        <div class="card" style="width: 14rem;height: 23rem;">
+                            <img src="{% static 'images/hotels.jpg' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.</p>
+                                <a href="{% url 'ease_ad:hotel_details' %}" class="btn btn-primary">View More</a>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="exclude">
+    <div class="member">
+        <div class="member-1">
+            <p class="mem-p1">Enjoy Your Holidays</p>
+            <p class="mem-p2">Amazing Expericence</p>
+            <P class="mem-p3">Eager to start planning your trip to India? Take a look at<br> options in Goa, popular with other visitors to the country.</P>
+        </div>
+        <div class="exclude-img">
+            <img src="{% static 'images/hotel_bed.jpg' %}" alt="" >
+
+
+        </div>
+    </div>
+    
+
+</section>
+<section class="exclude1">
+    <div class="member1">
+        <div class="exclude-img1">
+            <img src="{% static 'images/hotels.jpg' %}" alt="" >
+
+
+        </div>
+        <div class="member-2">
+            <p class="mem-p4">Enjoy Your Holidays</p>
+            <p class="mem-p5">Amazing Expericence</p>
+            <P class="mem-p6"> Popular with guests booking resorts in India</P>
+        </div>
+       
+    </div>
+    
+
+</section>
+<section class="exclude">
+    <div class="member">
+        <div class="member-1">
+            <p class="mem-p1">Enjoy Your Holidays</p>
+            <p class="mem-p2">Hotels in India</p>
+            <P class="mem-p3">Explore more great accommodation options for <br> your trip</P>
+        </div>
+        <div class="exclude-img">
+            <img src="{% static 'images/pool.jpg' %}" alt="" >
+
+
+        </div>
+    </div>
+    
+
+</section>
+{% endblock %}

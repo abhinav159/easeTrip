@@ -1,0 +1,139 @@
+{% extends 'common_master.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+<style>
+    .tope {
+        background-color: darkblue;
+        height: 100px;
+
+    }
+
+    .image img {}
+
+    .card1 {
+        padding-top: 30px;
+        padding-left: 10px;
+        padding-bottom: 30px;
+
+
+    }
+
+    .card {
+        border-radius: 10px;
+        box-shadow: 0 0 10px 1px rgb(145, 137, 122);
+        margin-left: 800px;
+        margin-top: -200px;
+
+
+
+    }
+
+    .card img {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .overview h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .overview h1 {
+        text-align: center;
+        width: 80%;
+        margin-left: 10%;
+        color: orange;
+    }
+
+    .overview p {
+        width: 90%;
+        text-align: center;
+        margin-left: 5%;
+        font-weight: 500;
+    }
+
+    .card2 {
+        border-radius: 10px;
+        box-shadow: 0 0 10px 1px rgb(145, 137, 122);
+        margin-top: 30px;
+        margin-left: 100px;
+        margin-bottom: 50px;
+
+    }
+
+    .similar h2 {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .card-body {
+        text-align: center;
+
+
+    }
+
+    .card-body a {
+        width: 150px;
+        height: 40px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+        background-color: orange;
+
+    }
+</style>
+
+<section>
+    <div class="tope"></div>
+    <div class="image">
+        <img src="{% static 'images/hotels.jpg' %}" alt="" width="100%" height="500px">
+    </div>
+    <div class="card1">
+        <div class="card" style="width: 22rem;">
+            <img src="{% static 'images/hotel_bed.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="overview">
+        <h2>Overview</h2>
+        <h1> amet consectetur adipisicing elit. Accusamus perferendis tempora iste pariatur </h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam cumque ut voluptatem eum odit rerum
+            architecto, suscipit consectetur, beatae maiores eos nulla vero illum temporibus magni vitae nesciunt vel
+            laudantium.</p>
+    </div>
+    <div class="similar">
+        <h2>Similar Properties</h2>
+        <div class="row">
+
+            <div class="col-4">
+                <div class="card2" style="width: 18rem;">
+                    <img src="{% static 'images/hotels.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
